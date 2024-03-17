@@ -1,9 +1,7 @@
 # Multimodal Lecture Presentations Dataset
 
 # Requirements
-
-Để được kết quả bao gồm image + text. Ta cần dữ liệu phải có những phần sau:
-To get image + text. We need this below data:
+To get image + text. We need data to have the following parts::
 1. Video (Online/Offline)
 2. Segment (Transition time between slides)
 3. Spoken Text (Dialogue in the video)
