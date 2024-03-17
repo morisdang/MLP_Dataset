@@ -10,7 +10,7 @@ To get image + text. We need data to have the following parts:
 
 
 # Preprocess 
-Via this [link](https://drive.google.com/file/d/1n0ziL8Vd8GBC9B981dGA3cHfsm68S93R/view?usp=drive_link) to know more about my data processing.
+Via this [link](slide_segmentation.py) to know more about my data processing.
 
 ## Step 
 1. Load data from YouTube (according to the dataset being used) - including video and title.
