@@ -3,9 +3,10 @@
 # Requirements
 
 Để được kết quả bao gồm image + text. Ta cần dữ liệu phải có những phần sau:
+To get image + text. We need this below data:
 1. Video (Online/Offline)
-2. Segment (Thời gian chuyển tiếp giữa các slide)
-3. Spoken Text (Lời thoại trong video)
+2. Segment (Transition time between slides)
+3. Spoken Text (Dialogue in the video)
 ```bash
 📂 ./
 ┗━━ 📂 Slide-data
@@ -33,14 +34,13 @@
 
 # Preprocess 
 
-1. Load dữ liệu về từ youtube (theo bộ dataset đang sử dụng) - bao gồm cả video và title.
-2. So sánh dữ liệu thu thập được với folder của dataset (do dữ liệu tải về sẵn không khớp với dữ liệu từ youtube) và chọn lọc ra những phần chung.
-3. Đọc file segment của từng folder (tức từng video), gộp tất cả lại thành segments (biến này chứa tất cả segment file dưới dạng list(dataframe))
-4. Viết lại *paths* cho video vì có những video không có folder data (tính năng dùng ocr để check đang được phát triển, nguyên nhân do folder và video title không trùng với nhau).
-5. Cắt ảnh từ video dựa trên segments. 
-6. Trích xuất lời thoại từ file *.csv* đóng gói thành file **spoken_texts.json** với format (path_slide + slide_source)
-Ví dụ : 
-
+1. Load data from YouTube (according to the dataset being used) - including video and title.
+2. Compare the collected data with the dataset folder (because the downloaded data does not match the data from YouTube) and select common parts.
+3. Read the segment file of each folder (ie each video), combine them all into segments (this variable contains all segment files in the form of list(dataframe))
+4. Rewrite *paths* for videos because there are videos that do not have folder data (the feature of using ocr to check is being developed, the reason is because the folder and video title do not match).
+5. Crop images from videos based on segments.
+6. Extract speech from *.csv* file and package it into **spoken_texts.json** file with format (path_slide + slide_source)
+For example :
 ```json
 {
     "01": {
